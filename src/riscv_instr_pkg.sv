@@ -693,6 +693,8 @@ package riscv_instr_pkg;
     CS_FORMAT,
     CSS_FORMAT,
     CIW_FORMAT,
+    // Custom formats for custom instructions
+    `include "isa/custom/riscv_custom_instr_format_enum.sv"
     // Vector instruction format
     VSET_FORMAT,
     VA_FORMAT,
@@ -741,6 +743,7 @@ package riscv_instr_pkg;
     TRAP,
     INTERRUPT,
     `VECTOR_INCLUDE("riscv_instr_pkg_inc_riscv_instr_category_t.sv")
+    `include "isa/custom/riscv_custom_instr_category_enum.sv"
     AMO // (last one)
   } riscv_instr_category_t;
 
